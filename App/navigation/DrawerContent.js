@@ -104,7 +104,7 @@ const DrawerContent = props => {
       ))}
 
       {/* ----------- */}
-
+      <View style={{marginVertical: 50}} />
       {/* End Social Network */}
     </DrawerContentScrollView>
   );

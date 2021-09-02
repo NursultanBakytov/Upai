@@ -54,6 +54,7 @@ export default function BottomBar() {
         top: -40,
         justifyContent: 'center',
         backgroundColor: 'rgba(0,0,0,0.1)',
+        flex: 1,
       }}>
       <View
         style={{
@@ -80,13 +81,11 @@ export default function BottomBar() {
     <Tab.Navigator
       initialRouteName="Главная"
       backBehavior="history"
-      tabBarOptions={{
-        showLabel: false,
-        keyboardHidesTabBar: true,
-      }}
       screenOptions={({route}) => ({
-        header: () => null,
         tabBarStyle: {height: 60},
+        headerShown: false,
+        tabBarShowLabel: false,
+        tabBarHideOnKeyboard: true,
         tabBarIcon: ({focused, color, size}) => {
           let iconName;
           const rn = route.name;

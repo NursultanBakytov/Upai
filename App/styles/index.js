@@ -13,6 +13,11 @@ const styles = StyleSheet.create({
   fl1: {flex: 1},
   wh20: {width: 20, height: 20},
   center: {alignItems: 'center', justifyContent: 'center'},
+  rowBetween: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
   // ----------------------------------------------------
   CustomInput: {
     height: 45,
@@ -97,6 +102,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 18,
     alignItems: 'center',
     justifyContent: 'space-between',
+    marginBottom: 15,
   },
   HomeCoin: {
     width: 78,
@@ -105,6 +111,63 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  HomecategoriesText: {marginHorizontal: 20, marginTop: -90},
+  HomeCategoriesImage: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 82,
+    height: 80,
+    borderRadius: 7,
+    backgroundColor: 'white',
+    elevation: 5,
+  },
+  HomeHorizontalComponent: {
+    marginHorizontal: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  HomeHorizontalComponentShadow: {
+    height: 90,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 20,
+    marginTop: 10,
+    paddingTop: -5,
+    marginBottom: 5,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 11,
+    },
+    shadowOpacity: 0.55,
+    shadowRadius: 14.78,
+    elevation: 4,
+  },
+  HomeHorizontalRating: {
+    fontWeight: '700',
+    fontSize: 12,
+    color: '#FF0707',
+    marginLeft: 4,
+  },
+  HomeHorizontalRecall: {
+    fontSize: 10,
+    color: '#313131',
+    marginLeft: 4,
+  },
+  HomeHorizontalFirstProcent: {
+    fontSize: 12,
+    color: '#8D8D8D',
+    color: '#27AE60',
+    fontFamily: 'Pro',
+  },
+  HomeHorizontalSecondProcent: {
+    fontSize: 16,
+    color: '#27AE60',
+    fontFamily: 'Pro',
+    fontWeight: 'bold',
   },
   // ############### END HOME STYLES ###############
   // ----------------------------------------------------
