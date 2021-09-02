@@ -10,21 +10,18 @@ import {
 import BackCarousel from '../../Components/BackCarousel';
 
 import CustomStatusBar from '../../Components/CustomStatusBar';
-import {CustomWidth} from '../../Components/TopComponents';
 import styles from '../../styles';
 
 const HomePage = props => {
   // -------------------------
   const images = [
-    'https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-
-    'https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80',
-
-    'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
-
-    'https://images.unsplash.com/photo-1429087969512-1e85aab2683d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
-
-    'https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+    'https://w.wallhaven.cc/full/96/wallhaven-96q7y8.jpg',
+    'https://w.wallhaven.cc/full/76/wallhaven-76moj9.jpg',
+    'https://w.wallhaven.cc/full/j8/wallhaven-j8lyky.jpg',
+    'https://w.wallhaven.cc/full/ym/wallhaven-ymgyxk.jpg',
+    'https://w.wallhaven.cc/full/47/wallhaven-47l3q3.jpg',
+    'https://w.wallhaven.cc/full/6k/wallhaven-6k22z6.jpg',
+    'https://w.wallhaven.cc/full/p8/wallhaven-p83w1p.jpg',
   ];
 
   return (
@@ -46,7 +43,6 @@ const HomePage = props => {
             />
           </TouchableOpacity>
         </View>
-        {console.log(CustomWidth)}
         {/* ------------------ */}
         <View style={styles.HomeHeaderBalance}>
           <View style={styles.fdRow}>
@@ -64,7 +60,7 @@ const HomePage = props => {
         </View>
         {/* ------------------ */}
 
-        <BackCarousel data={images} />
+        <BackCarousel images={images} />
         {/* <ScrollView
           horizontal
           pagingEnabled

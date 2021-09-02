@@ -1,7 +1,5 @@
 import React, {Component, createRef} from 'react';
-import {Image, ScrollView, View, StyleSheet} from 'react-native';
-
-import {CustomWidth} from './TopComponents';
+import {Image, ScrollView, View, StyleSheet, Dimensions} from 'react-native';
 
 export default class BackCarousel extends Component {
   scrollRef = createRef();
@@ -23,7 +21,7 @@ export default class BackCarousel extends Component {
           this.scrollRef.current.scrollTo({
             animated: true,
             y: 0,
-            x: CustomWidth * this.state.selectedIndex,
+            x: Dimensions.get('window').width * this.state.selectedIndex,
           });
         },
       );
@@ -43,8 +41,9 @@ export default class BackCarousel extends Component {
     const {images} = this.props;
     const {selectedIndex} = this.state;
     return (
-      <View style={{width: '100%', height: '100%'}}>
+      <View style={{width: '100%', height: 180}}>
         <ScrollView
+          showsHorizontalScrollIndicator={false}
           horizontal
           pagingEnabled
           onMomentumScrollEnd={this.setSelectedIndex}
@@ -59,7 +58,7 @@ export default class BackCarousel extends Component {
               key={item}
               style={[
                 styles.indicator,
-                {opacity: i === selectedIndex ? 0.5 : 1},
+                {backgroundColor: i === selectedIndex ? '#FF6B00' : '#C4C4C4'},
               ]}
             />
           ))}
@@ -70,10 +69,16 @@ export default class BackCarousel extends Component {
 }
 
 const styles = StyleSheet.create({
-  backImage: {width: CustomWidth, height: '100%'},
+  backImage: {
+    width: Dimensions.get('window').width - 40,
+    alignSelf: 'center',
+    height: 150,
+    marginHorizontal: 20,
+    borderRadius: 10,
+  },
   circle: {
     position: 'absolute',
-    top: 160,
+    top: 170,
     height: 10,
     flexDirection: 'row',
     alignItems: 'center',
@@ -81,10 +86,9 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   indicator: {
-    width: 12.11,
+    marginVertical: 8,
     height: 1,
     width: 12.11,
     margin: 5,
-    backgroundColor: 'red',
   },
 });

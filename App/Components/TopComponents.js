@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {ActivityIndicator, Dimensions} from 'react-native';
 
 const window = Dimensions.get('window');
@@ -22,7 +22,7 @@ export const FullLoader = (
       position: 'absolute',
       zIndex: 2,
       flex: 1,
-      width: width,
+      width: CustomWidth,
       height: '100%',
       justifyContent: 'center',
       alignSelf: 'center',
